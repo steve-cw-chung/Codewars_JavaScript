@@ -15,7 +15,7 @@ anagrams('racer', ['crazer', 'carer', 'racar', 'caers', 'racer']) => ['carer', '
 
 anagrams('laser', ['lazing', 'lazy',  'lacer']) => [] */
 
-String.prototype.sort = function() {
+ String.prototype.sort = function() {
     return this.split("").sort().join("");
   };
   
@@ -24,7 +24,7 @@ String.prototype.sort = function() {
         return x.sort() === word.sort();
     });
   }
-console.log(anagrams('abba', ['aabb', 'abcd', 'bbaa', 'dada']));
+console.log(anagrams('abba', ['aabb', 'abcd', 'bbaa', 'dada'])); 
 
 /* Solution 2 
 
