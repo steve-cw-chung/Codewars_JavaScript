@@ -18,16 +18,13 @@ var result = solution("apples, pears # and bananas\ngrapes\nbananas !apples", ["
 // result should == "apples, pears\ngrapes\nbananas" */
 
 function solution(input, markers) {
-    //console.log(input);
-    //console.log(markers);
+
     var output = "";
-    //console.log(input.split("\n"));
+
     let inputs = input.split("\n");
     inputs.forEach( (line,index) => markers.forEach( marker => 
         line.indexOf(marker)>-1?line = inputs[index] = line.slice(0, line.indexOf(marker)): 0//console.log(marker + " does not exist")
         ));
-    console.log(inputs[2].length);
-    console.log(inputs[2].charAt((inputs[2].length)-1));
   
     inputs.forEach((line,index ) => line.charAt((line.length)-1)===' '?inputs[index]=line.slice(0,(line.length)-1):0);
     inputs.forEach((line,index) => index<inputs.length-1?output+=(inputs[index]=line.concat("\n")):output+=line);
